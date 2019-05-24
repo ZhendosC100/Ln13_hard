@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,AAAC,CACF,gBAAgB,CAAE,KAAK,CAAG",
+    "sources": [
+        "../../sass/blocks/navbar.sass"
+    ],
+    "names": [],
+    "file": "navbar.min.css"
+}
