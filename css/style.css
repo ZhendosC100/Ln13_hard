@@ -78,7 +78,7 @@ button {
   border-radius: 10px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .container {
     max-width: 960px;
   }
@@ -97,8 +97,68 @@ button {
 }
 
 @media (max-width: 768px) {
+  .container {
+    max-width: 690px;
+  }
   .navbar-block {
     padding: 17px 0;
+  }
+}
+
+@media (max-width: 717px) {
+  .container {
+    max-width: 580px;
+  }
+  .navbar__logo {
+    width: 91px;
+    height: 44px;
+  }
+  .navbar__text span {
+    font-size: 10px;
+  }
+  .navbar__text a {
+    font-size: 16px;
+  }
+  .navbar__btn {
+    width: 137px;
+    height: 39px;
+    margin-right: 2px;
+    padding: 15px 26px 14px 26px;
+    border-radius: 5px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 596px) {
+  .container {
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 531px) {
+  .container {
+    max-width: 460px;
+  }
+  .navbar__text {
+    display: none;
+  }
+}
+
+@media (max-width: 481px) {
+  .container {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 350px) {
+  .container {
+    max-width: 279px;
   }
 }
 /*# sourceMappingURL=style.css.map */
