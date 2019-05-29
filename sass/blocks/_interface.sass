@@ -6,10 +6,35 @@ body
     margin: 0 auto
     max-width: 1169px
 
-button
-    background-color: $main-color
+.section
+    padding-top: 50px
+    padding-bottom: 9px
+
+.title
+    font-size: 42px
+    line-height: 55px
+
+.subtitle
+    @include bold
+
+.input
+    border-radius: 10px
+    border: 1px solid $input-color
+    padding: 0 22px
+    @include thin
+    color: $font-input-clr
+    &:focus
+        border: 2px solid $main-color
+        border-radius: 10px
+
+.btn
     border: none
     border-radius: 10px
+    @include bold
+    background-color: $main-color
+    &:hover
+        background-color: lighten($main-color, 7%)
+        color: orange
 
 // --------------### MEDIA max-width: 1199px ###-------------------//
 
@@ -94,4 +119,18 @@ button
 
 @media (max-width: 350px)
     .container
-        max-width: 279px
+        max-width: 288px
+
+// --------------### MEDIA max-width: 321px ###-------------------//
+
+@media (max-width: 321px)
+
+    .navbar
+        &-block
+            width: 286px
+        &__btn
+            padding: 14px 24px 14px 26px
+            font-size: 10px
+            margin-right: -3px
+        &__logo
+            margin-left: 13px
