@@ -116,6 +116,7 @@ body {
 .input:focus {
   border: 2px solid #ffd200;
   border-radius: 10px;
+  outline: none;
 }
 
 .btn {
