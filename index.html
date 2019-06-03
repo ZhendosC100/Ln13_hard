@@ -7,7 +7,8 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/normalize.css">
-	<title>Lesson 17</title>
+	<link rel="stylesheet" href="css/slick.css">
+	<title>Lesson 19</title>
 </head>
 
 <body>
@@ -84,7 +85,7 @@
 		<!-- /.container -->
 	</main>
 	<!-- /.hero -->
-	<div class="offer section">
+	<main class="offer section">
 		<div class="container">
 			<div class="wrapper offer-wrapper">
 				<div class="offer-box_info">
@@ -128,8 +129,59 @@
 			<!-- /.wrapper -->
 		</div>
 		<!-- /.container -->
-	</div>
+	</main>
 	<!-- /.offer -->
+
+	<main class="section portfolio">
+		<div class="container">
+			<div class="wrapper portfolio-wrapper">
+				<h2 class="title  portfolio-wrapper__title">
+					Работая с 2007 года, <br>
+					мы сделали более 500 
+					ремонтов в квартирах и домах
+				</h2>
+
+				<div class="slider">
+					<div class="slider__item">
+						<img src="img/pic_1.png" alt="photo">
+					</div>
+					<!-- /.slider__item -->
+					<div class="slider__item">
+						<img src="img/pic_2.png" alt="photo">
+					</div>
+					<!-- /.slider__item -->
+					<div class="slider__item">
+						<img src="img/pic_3.png" alt="photo">
+					</div>
+					<!-- /.slider__item -->
+					<div class="slider__item">
+						<img src="img/pic_1.png" alt="photo">
+					</div>
+					<!-- /.slider__item -->
+					<div class="slider__item">
+						<img src="img/pic_2.png" alt="photo">
+					</div>
+					<!-- /.slider__item -->
+					<div class="slider__item">
+						<img src="img/pic_3.png" alt="photo">
+					</div>
+					<!-- /.slider__item -->
+				</div>
+				<!-- /.slider -->
+				<div class="arrows portfolio__arrows">
+					<div class="arrows__left">
+						<img src="img/left-arrow.png" alt="arrow__left">
+					</div>
+					<div class="arrows__right">
+						<img src="img/right-arrow.png" alt="arrow__right">
+					</div>
+				</div>
+			</div>
+			<!-- /.wrapper -->
+		</div>
+		<!-- /.container -->
+	</main>
+	<!-- /.section -->
 
 	<!-- Popup menu -->
 
@@ -141,7 +193,31 @@
 		</p>
 	</aside>
 
-	<script src="js/index.js"></script>
+	<div class="up" title="up">
+		<img src="img/up_new.svg" alt="up" class="up-btn">
+	</div>
+
+	<!-- <script src="js/index.js"></script> -->
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous">
+	</script>
+
+	<script src="js/slick.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+     		$('.slider').slick({
+        		slidesPerRow: 1,
+				slidesToShow: 3,
+				prevArrow: $('.arrows__left'),
+				nextArrow: $('.arrows__right')
+      		});
+    	});
+	</script>
+
+	<script src="js/main.js"></script>
 </body>
 
 </html>

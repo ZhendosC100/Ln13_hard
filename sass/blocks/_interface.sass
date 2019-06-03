@@ -10,6 +10,11 @@ body
     padding-top: 50px
     padding-bottom: 9px
 
+.wrapper
+    display: flex
+    justify-content: space-between
+    color: $text-color
+
 .title
     font-size: 42px
     line-height: 55px
@@ -37,6 +42,21 @@ body
     &:hover
         background-color: lighten($main-color, 7%)
         color: orange
+
+.up
+    position: fixed
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 24px
+    height: 24px
+    padding: 1px
+    bottom: 10px
+    right: 10px
+    background-color: grey
+    &-btn
+        width: 22px
+        height: 22px
 
 // --------------### MEDIA max-width: 1199px ###-------------------//
 
