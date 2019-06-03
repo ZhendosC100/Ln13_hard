@@ -690,4 +690,17 @@ body {
   margin-bottom: 100px;
   width: 121px;
 }
+
+.owl-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+  margin-top: 68px;
+  margin-bottom: 100px;
+  width: 121px;
+}
 /*# sourceMappingURL=style.css.map */

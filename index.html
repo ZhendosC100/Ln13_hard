@@ -7,7 +7,9 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- <link rel="stylesheet" href="css/slick.css">  -->
 	<title>Lesson 19</title>
 </head>
 
@@ -141,34 +143,34 @@
 					ремонтов в квартирах и домах
 				</h2>
 
-				<div class="slider">
-					<div class="slider__item">
+				<div class="slider owl-carousel">
+					<div class="slider__item item">
 						<img src="img/pic_1.png" alt="photo">
 					</div>
 					<!-- /.slider__item -->
-					<div class="slider__item">
+					<div class="slider__item item">
 						<img src="img/pic_2.png" alt="photo">
 					</div>
 					<!-- /.slider__item -->
-					<div class="slider__item">
+					<div class="slider__item item">
 						<img src="img/pic_3.png" alt="photo">
 					</div>
 					<!-- /.slider__item -->
-					<div class="slider__item">
+					<div class="slider__item item">
 						<img src="img/pic_1.png" alt="photo">
 					</div>
 					<!-- /.slider__item -->
-					<div class="slider__item">
+					<div class="slider__item item">
 						<img src="img/pic_2.png" alt="photo">
 					</div>
 					<!-- /.slider__item -->
-					<div class="slider__item">
+					<div class="slider__item item">
 						<img src="img/pic_3.png" alt="photo">
 					</div>
 					<!-- /.slider__item -->
 				</div>
 				<!-- /.slider -->
-				<div class="arrows portfolio__arrows">
+				<!-- <div class="arrows portfolio__arrows">
 					<div class="arrows__left">
 						<img src="img/left-arrow.png" alt="arrow__left">
 					</div>
@@ -176,7 +178,7 @@
 						<img src="img/right-arrow.png" alt="arrow__right">
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<!-- /.wrapper -->
 		</div>
 		<!-- /.container -->
@@ -204,7 +206,31 @@
 		crossorigin="anonymous">
 	</script>
 
-	<script src="js/slick.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$('.owl-carousel').owlCarousel({
+				loop:true,
+				margin:10,
+				nav:true,
+				responsive:{
+					0:{
+						items:1
+					},
+					600:{
+						items:3
+					},
+					1000:{
+						items:3
+					}
+				}
+			})
+			$( ".owl-prev").html('<img src="img/left-arrow.png" alt="arrow__left"></<img>');
+ 			$( ".owl-next").html('<img src="img/right-arrow.png" alt="arrow__right">');
+		});
+	</script>
+	<!-- <script src="js/slick.min.js"></script>
 
 	<script>
 		$(document).ready(function(){
@@ -215,7 +241,7 @@
 				nextArrow: $('.arrows__right')
       		});
     	});
-	</script>
+	</script> -->
 
 	<script src="js/main.js"></script>
 </body>
