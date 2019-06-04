@@ -1,0 +1,51 @@
+.steps
+    padding-top: 114px
+    padding-bottom: 90px
+    &__title
+        margin: auto
+        margin-bottom: 40px
+        text-align: center
+        max-width: 655px
+        @include bold
+        font-size: 30px
+        line-height: 45px
+    &__subtitle
+        display: block
+        margin-bottom: 56px
+        text-align: center
+        @include thin
+        font-size: 20px
+        line-height: 45px
+    &__wrap
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: auto
+        width: 94px
+        height: 94px
+        border: 3px solid #ffd200
+        border-radius: 50%
+    &__block
+        display: flex
+        &_item
+            position: relative
+            width: 20%
+            &:after
+                content: ''
+                position: absolute
+                top: -12px
+                right: -15%
+                width: 72px
+                height: 25px 
+                background: url('../img/arrow_step.png')
+            &:last-child
+                &:after
+                    display: none
+    &_info
+        margin: auto
+        margin-top: 24px
+        max-width: 173px
+        @include bold
+        text-align: center
+        font-size: 14px
+        line-height: 20px

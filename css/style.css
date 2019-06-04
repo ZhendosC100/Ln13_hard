@@ -778,6 +778,10 @@ button {
   }
 }
 
+.price {
+  padding-bottom: 40px;
+}
+
 .price-wrapper {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -843,6 +847,7 @@ button {
 }
 
 .price__cards_info {
+  margin-bottom: 16px;
   font-family: "MuseoSansCyrl-300";
   font-weight: 300;
   font-size: 18px;
@@ -886,5 +891,84 @@ button {
   height: 6px;
   background-color: #ffd200;
   z-index: -1;
+}
+
+.steps {
+  padding-top: 114px;
+  padding-bottom: 90px;
+}
+
+.steps__title {
+  margin: auto;
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 655px;
+  font-family: "MuseoSansCyrl-700";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+}
+
+.steps__subtitle {
+  display: block;
+  margin-bottom: 56px;
+  text-align: center;
+  font-family: "MuseoSansCyrl-300";
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 45px;
+}
+
+.steps__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  width: 94px;
+  height: 94px;
+  border: 3px solid #ffd200;
+  border-radius: 50%;
+}
+
+.steps__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.steps__block_item {
+  position: relative;
+  width: 20%;
+}
+
+.steps__block_item:after {
+  content: '';
+  position: absolute;
+  top: -12px;
+  right: -15%;
+  width: 72px;
+  height: 25px;
+  background: url("../img/arrow_step.png");
+}
+
+.steps__block_item:last-child:after {
+  display: none;
+}
+
+.steps_info {
+  margin: auto;
+  margin-top: 24px;
+  max-width: 173px;
+  font-family: "MuseoSansCyrl-700";
+  font-weight: 700;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
 }
 /*# sourceMappingURL=style.css.map */
