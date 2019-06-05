@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-let btn = $('.btn'),
+let btn = $('.navbar__btn'),
     modal = $('.modal'),
     up = $('.up'),
     close = $('.modal__close');
