@@ -104,9 +104,9 @@
 						бесплатного дизайн-проекта!
 					</span>
 					<!-- /.hero-box_subtitle -->
-					<form class="form offer__form" action="#">
-						<input type="text" class="input offer__form_input" placeholder="Ваше имя">
-						<input type="text" class="input offer__form_input" placeholder=" Ваш телефон">
+					<form id="form_offer" class="form offer__form" action="#">
+						<input type="text" name="user_name" class="input offer__form_input offer_name" placeholder="Ваше имя">
+						<input type="text" name="user_phone" class="input offer__form_input offer_phone" placeholder=" Ваш телефон">
 						<button class="btn offer__form_btn">Получить бесплатный дизайн-проект</button>
 					</form>
 
@@ -379,10 +379,10 @@
 						<span class="subtitle form__subtitle">Для этого заполните форму ниже</span>
 						<!-- /.subtitle -->
 	
-						<form class="form" action="#">
-							<input type="text" class="input brif__input" placeholder="Ваше Имя">
-							<input type="tel" class="input brif__input" placeholder="Ваш телефон">
-							<input type="email" class="input brif__input" placeholder="Ваш e-mail">
+						<form id="form_brif" class="form form_br" action="#">
+							<input type="text" name="user_name" class="input brif__input" placeholder="Ваше Имя">
+							<input type="tel" name="user_phone" class="input brif__input brif_phone" placeholder="Ваш телефон">
+							<input type="email" name="user_email" class="input brif__input" placeholder="Ваш e-mail">
 							<button class="btn brif__btn">Рассчитать стоимость</button>
 						</form>
 	
@@ -422,10 +422,73 @@
 	<script src="js/wow.min.js"></script>
 
 	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
 
 	<script>
 		new WOW().init();
 		$(document).ready(function(){
+			
+			
+
+			$('#form_brif').validate({
+				errorClass: "invalid",
+				errorElement: "div",
+				rules: {
+					user_name: {
+					required: true,
+					minlength: 2,
+					maxlength: 15
+					},
+					user_phone: {
+					required: true
+					},
+					user_email: {
+					required: true,
+					email: true
+					}
+				},
+				messages: {
+					user_name: {
+						required:"Введите Ваше имя",
+						minlength: jQuery.validator.format("Минимум {0} символа!"),
+						maxlength: jQuery.validator.format("Максимум {0} символов!")
+					},
+						user_phone: "Введите телефон",
+						user_email: {
+						required: "Введите e-mail",
+						email: "Введите в формате name@domain.com"
+					}
+				}
+			});
+			
+			// Validate
+			$('#form_offer').validate({
+				errorClass: "invalid",
+				errorElement: "div",
+
+				rules: {
+					user_name: {
+					required: true,
+					minlength: 2,
+					maxlength: 15
+					},
+					user_phone: {
+					required: true
+					}
+				},
+				messages: {
+					user_name: {
+						required:"Заполните поле",
+						minlength: jQuery.validator.format("Минимум {0} символа!"),
+						maxlength: jQuery.validator.format("Максимум {0} символов!")
+					},
+						user_phone: "Заполните поле"
+				}
+			});
+			// Mask to phone
+			$('.brif_phone, .offer_phone').mask('8 (999) 99-99-99');
+			// Slider
 			$('.owl-carousel').owlCarousel({
 				loop:true,
 				margin:10,

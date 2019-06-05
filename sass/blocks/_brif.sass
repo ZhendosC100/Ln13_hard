@@ -73,7 +73,7 @@
             margin-left: 30px
             font-size: 18px
 
-.form
+.form_br
     max-width: 370px
 
 .form
@@ -100,6 +100,13 @@
         @include bold
         font-size: 15px
         line-height: 24px
+
+input.invalid
+    border: 1px solid red
+
+div.invalid
+    border: none
+
 
 // --------------### MEDIA max-width: 1400px ###-------------------//
 @media (max-width: 1400px)
@@ -133,8 +140,8 @@
             width: 100%
         &__form
             margin-left: 0
-.wrap
-    width: 100%
+    .wrap
+        width: 100%
 
 // --------------### MEDIA max-width: 600px ###-------------------//
 @media (max-width: 600px)
@@ -157,7 +164,7 @@
         padding-top: 42px
         background-image: url('../img/brif/brif_color_bg.jpg'), url('../img/brif/brif_bg_img.jpg')
         background-position: top center, bottom center
-        background-size: 100% 41%, 100% 59%
+        background-size: 100% 43%, 100% 59%
         background-repeat: repeat-x, no-repeat
         padding-bottom: 93px
         &__title
@@ -209,5 +216,5 @@
             width: 223px
             font-size: 14px
             line-height: 26.88px
-    .form
+    .form_br
         max-width: 275px
