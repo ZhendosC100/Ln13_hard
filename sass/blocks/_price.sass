@@ -71,3 +71,87 @@
                 height: 6px
                 background-color: #ffd200
                 z-index: -1
+
+
+// --------------### MEDIA max-width: 998px ###-------------------//
+
+@media (max-width: 998px)
+    .price
+        &__know
+             &:before
+                content: ""
+                background: none
+        &__cards
+            justify-content: center
+            &_item
+                width: 271px
+                height: 300px
+                &:hover 
+                    box-shadow: none
+                    &:before
+                        content: ""
+                        background: none
+                &:hover .price__know:before
+                    content: ""
+                    background: none
+    .img
+        width: 271px
+
+// --------------### MEDIA max-width: 800px ###-------------------//
+
+@media (max-width: 800px)
+    .price
+        &__cards
+            justify-content: center
+            
+
+// --------------### MEDIA max-width: 700px ###-------------------//
+
+@media (max-width: 700px)
+    .price
+        &-wrapper
+            &__title
+                width: 450px
+                font-size: 22px
+                line-height: 38px
+
+// --------------### MEDIA max-width: 500px ###-------------------//
+
+@media (max-width: 500px)
+    .price
+        &-wrapper
+            &__title
+                max-width: 300px
+                font-size: 22px
+                line-height: 38px
+
+// --------------### MEDIA max-width: 392px ###-------------------//
+
+@media (max-width: 392px)
+    .price
+        padding-top: 0
+        &-wrapper
+            &__title
+                margin-top: 51px
+                margin-bottom: 12px
+                max-width: 242px
+                font-size: 18px
+                line-height: 22px
+            &__subtitle
+                margin-left: -14px
+                font-size: 14px
+                line-height: 45px
+        &__cards
+            &_item
+                width: 271px
+                height: 300px
+            &_info
+                margin-top: 10px
+                margin-bottom: -1px
+                @include bold
+                font-size: 14px
+                line-height: 45px
+        &__know
+            @include bold
+            font-size: 16px
+            line-height: 18px

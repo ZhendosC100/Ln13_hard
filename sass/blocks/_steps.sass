@@ -49,3 +49,67 @@
         text-align: center
         font-size: 14px
         line-height: 20px
+
+// --------------### MEDIA max-width: 1000px ###-------------------//
+
+@media (max-width: 1000px)
+    .steps
+        &__title
+            width: 600px
+        &__block
+            justify-content: center
+            flex-wrap: wrap
+            &_item
+                width: 30%
+                margin-bottom: 40px
+                &:after
+                    display: none
+
+// --------------### MEDIA max-width: 700px ###-------------------//
+
+@media (max-width: 700px)
+    .steps
+        &__title
+            width: 450px
+            font-size: 22px
+            line-height: 38px
+
+// --------------### MEDIA max-width: 500px ###-------------------//
+
+@media (max-width: 500px)
+    .steps
+        &__title
+            max-width: 300px
+        &__block
+            &_item
+               width: 80%
+
+// --------------### MEDIA max-width: 392px ###-------------------//
+
+@media (max-width: 392px)
+    .steps
+        padding-top: 10px
+        &__title
+            margin-bottom: 8px
+            max-width: 282px
+            font-size: 18px
+            line-height: 23px
+        &__subtitle
+            margin-bottom: 19px
+            font-size: 14px
+            line-height: 45px
+        &_info
+            min-height: 45px
+            margin-top: 20px
+            font-size: 12px
+            line-height: 16px
+        &__block_item
+            margin-bottom: 30px
+    .two
+        margin-top: -11px
+    .three
+        margin-top: 6px
+    .four
+        margin-top: 6px
+    .correct
+        margin-top: 23px
