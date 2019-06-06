@@ -906,10 +906,6 @@ button {
 }
 
 @media (max-width: 998px) {
-  .price__know:before {
-    content: "";
-    background: none;
-  }
   .price__cards {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -929,7 +925,14 @@ button {
   }
   .price__cards_item:hover .price__know:before {
     content: "";
-    background: none;
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    width: 96px;
+    height: 3px;
+    background-color: #ffd200;
   }
   .img {
     width: 271px;
@@ -1148,6 +1151,108 @@ button {
   }
   .correct {
     margin-top: 23px;
+  }
+}
+
+.change {
+  padding-bottom: 80px;
+}
+
+.change__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.change__box {
+  position: relative;
+  padding-top: 23px;
+  padding-left: 26px;
+  width: 344px;
+  height: 387px;
+  background-color: #f7f7f7;
+}
+
+.change__info {
+  margin: 0;
+  max-width: 290px;
+  font-family: "MuseoSansCyrl-300";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.change__info_bold {
+  font-family: "MuseoSansCyrl-700";
+  font-weight: 700;
+}
+
+.change__img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .change__wrapper {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .change__box {
+    margin-bottom: 70px;
+  }
+  .change__box:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .change {
+    padding-top: 0;
+  }
+  .change__wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 450px) {
+  .change__box {
+    position: relative;
+    padding-top: 19px;
+    padding-left: 19px;
+    width: 255px;
+    height: 281px;
+    background-color: #f7f7f7;
+  }
+  .change__info {
+    margin: 0;
+    max-width: 221px;
+    font-family: "MuseoSansCyrl-300";
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .change__box {
+    margin-bottom: 30px;
+  }
+  .change__box:last-child {
+    margin-bottom: 0;
+  }
+  .box__correct {
+    height: 291px;
   }
 }
 

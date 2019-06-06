@@ -1,0 +1,68 @@
+.change
+    padding-bottom: 80px
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__box
+        position: relative
+        padding-top: 23px
+        padding-left: 26px
+        width: 344px
+        height: 387px
+        background-color: #f7f7f7
+    &__info
+        margin: 0
+        max-width: 290px
+        @include thin
+        font-size: 16px
+        line-height: 23px
+        &_bold
+            +bold
+    &__img
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+
+// --------------### MEDIA max-width: 1200px ###-------------------//
+@media (max-width: 1200px)
+    .change
+        &__wrapper
+            justify-content: space-around
+            flex-wrap: wrap
+        &__box
+            margin-bottom: 70px
+            &:last-child
+                margin-bottom: 0
+
+// --------------### MEDIA max-width: 600px ###-------------------//
+@media (max-width: 600px)
+    .change
+        padding-top: 0
+        &__wrapper
+            justify-content: center
+            flex-wrap: wrap
+
+// --------------### MEDIA max-width: 450px ###-------------------//
+@media (max-width: 450px)
+    .change
+        &__box
+            position: relative
+            padding-top: 19px
+            padding-left: 19px
+            width: 255px
+            height: 281px
+            background-color: #f7f7f7
+        &__info
+            margin: 0
+            max-width: 221px
+            @include thin
+            font-size: 12px
+            line-height: 17px
+        &__box
+            margin-bottom: 30px
+            &:last-child
+                margin-bottom: 0
+    .box__correct
+        height: 291px

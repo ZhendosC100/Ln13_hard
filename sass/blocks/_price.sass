@@ -77,10 +77,6 @@
 
 @media (max-width: 998px)
     .price
-        &__know
-             &:before
-                content: ""
-                background: none
         &__cards
             justify-content: center
             &_item
@@ -93,7 +89,13 @@
                         background: none
                 &:hover .price__know:before
                     content: ""
-                    background: none
+                    position: absolute
+                    bottom: -4px
+                    left: 50%
+                    transform: translate(-50%)
+                    width: 96px
+                    height: 3px
+                    background-color: #ffd200
     .img
         width: 271px
 
