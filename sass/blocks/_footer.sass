@@ -1,0 +1,106 @@
+.footer
+    display: flex
+    padding: 0
+
+.map
+    position: relative
+    width: 50%
+    &__api
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+
+.contacts
+    width: 50%
+    &__title
+        margin-bottom: 89px
+        width: 296px
+        @include bold
+        font-size: 22px
+        line-height: 33px
+    &__wrapper
+        padding-top: 73px
+        padding-left: 210px
+        padding-bottom: 93px
+    &__list
+        padding: 0
+        list-style: none
+        &_item
+            display: block
+            margin-bottom: 31px
+    
+.list
+    &__text
+        margin: 0
+        margin-left: 22px
+        max-width: 147px
+        font-size: 16px
+        line-height: 26px
+        &_tel
+            color: $text-color
+            +bold
+            text-decoration: none
+            font-size: 16px
+            line-height: 26px
+    &__bold
+        @include bold
+    &__img
+        display: block
+        margin-top: 7px
+.first_text
+    margin-left: 28px
+        
+
+.li__wrapper
+    display: flex
+    align-items: flex-start
+
+// --------------### MEDIA max-width: 1100px ###-------------------//
+@media (max-width: 1100px)
+    .contacts
+        &__wrapper
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            padding: 0
+
+// --------------### MEDIA max-width: 840px ###-------------------//
+@media (max-width: 840px)
+    .footer
+        flex-wrap: wrap-reverse
+    .contacts
+        &__title
+            margin-bottom: 45px
+            font-size: 18px
+            line-height: 28px
+            text-align: center
+    .map
+        width: 99.8%
+        height: 665px
+    .contacts
+        width: 100%
+
+// --------------### MEDIA max-width: 400px ###-------------------//
+@media (max-width: 400px)
+    
+    .contacts
+        &__title
+            width: 274px
+            text-align: left
+            margin-bottom: 14px
+            margin-top: 64px
+            font-size: 18px
+            line-height: 22px
+        &__wrapper
+            align-items: flex-start
+            padding-left: 25px
+        &__list
+            margin-bottom: 24px
+    .first_text 
+        margin-left: 18px
+    .list__text
+        margin-left: 11px
+    
