@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(53966413, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/53966413" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+	<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(53971462, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/53971462" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 	<script type="text/javascript" charset="utf-8" async
 		src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A00eee1ff916de0a5ba4d755b92ae68598e4e5d4455b26dbde9c7a80a72e3f490&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false&amp;id=ya_map&amp;apikey=0343c3a4-78d4-46cc-a0ae-66bd278f3d46"></script>
 	<!-- <link rel="stylesheet" href="css/slick.css">  -->
@@ -30,7 +30,7 @@
 						<span>Калуга, Москва, МО</span>
 						<a href="tel:+7 (495) 42-251-31">+7 (495) 42-251-31</a>
 					</div>
-					<button class="btn navbar__btn" id="hero_btn" onclick="ym(51684529, 'reachGoal', 'hero_btn'); return true;">Перезвоните мне</b>
+					<button class="btn navbar__btn" onclick="ym(53971462, 'reachGoal', 'button'); return true;" id="button">Перезвоните мне</button>
 				</div>
 				<!-- /.navbar__info -->
 			</div>
@@ -107,12 +107,19 @@
 							бесплатного дизайн-проекта!
 						</span>
 						<!-- /.hero-box_subtitle -->
-						<form id="form_offer" class="form offer__form" action="#">
-							<input type="text" name="user_name" class="input offer__form_input offer_name"
-								placeholder="Ваше имя">
-							<input type="text" name="user_phone" class="input offer__form_input offer_phone"
-								placeholder=" Ваш телефон">
-							<button class="btn offer__form_btn" id="offer_button">Получить бесплатный дизайн-проект</button>
+						<form id="form_offer" class="form offer__form" action="server.php" method="get" onsubmit="ym(53971462, 'reachGoal', 'form'); return true;">
+							<div class="input-box">
+								<div class="input__wrapper">
+									<input type="text" name="user_name" class="input offer__form_input offer_name"
+									placeholder="Ваше имя">
+								</div>
+								<div class="input__wrapper">
+									<input type="text" name="user_phone" class="input offer__form_input offer_phone"
+									placeholder=" Ваш телефон">
+								</div>
+							</div>
+							<!-- /.input-box -->
+							<button class="btn offer__form_btn">Получить бесплатный дизайн-проект</button>
 						</form>
 
 						<div class="offer-box__contact">
@@ -417,11 +424,19 @@
 							<!-- /.subtitle -->
 
 							<form id="form_brif" class="form form_br" action="#">
-								<input type="text" name="user_name" class="input brif__input" placeholder="Ваше Имя">
-								<input type="tel" name="user_phone" class="input brif__input brif_phone"
-									placeholder="Ваш телефон">
-								<input type="email" name="user_email" class="input brif__input"
-									placeholder="Ваш e-mail">
+								<div class="input_wrapper">
+									<input type="text" name="user_name" class="input brif__input" placeholder="Ваше Имя">
+								</div>
+								<!-- /.input_wrapper -->
+								<div class="input_wrapper">
+									<input type="tel" name="user_phone" class="input brif__input brif_phone" placeholder="Ваш телефон">
+								</div>
+								<!-- /.input_wrapper -->
+								<div class="input_wrapper">
+									<input type="email" name="user_email" class="input brif__input" placeholder="Ваш e-mail">
+								</div>
+								<!-- /.input_wrapper -->
+								
 								<button class="btn brif__btn">Рассчитать стоимость</button>
 							</form>
 
@@ -536,13 +551,13 @@
 				},
 				messages: {
 					user_name: {
-						required: "Введите Ваше имя",
+						required: "Заполните поле 'Ваше Имя'!",
 						minlength: jQuery.validator.format("Минимум {0} символа!"),
 						maxlength: jQuery.validator.format("Максимум {0} символов!")
 					},
-					user_phone: "Введите телефон",
+					user_phone: "Заполните поле 'Ваш номер'!",
 					user_email: {
-						required: "Введите e-mail",
+						required: "Заполните поле 'Ваш e-mail'",
 						email: "Введите в формате name@domain.com"
 					}
 				}
@@ -565,11 +580,11 @@
 				},
 				messages: {
 					user_name: {
-						required: "Заполните поле",
+						required: "Заполните поле 'Ваше Имя'!",
 						minlength: jQuery.validator.format("Минимум {0} символа!"),
 						maxlength: jQuery.validator.format("Максимум {0} символов!")
 					},
-					user_phone: "Заполните поле"
+					user_phone: "Заполните поле 'Ваш номер'!"
 				}
 			});
 			// Mask to phone

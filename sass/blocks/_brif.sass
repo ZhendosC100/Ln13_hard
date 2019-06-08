@@ -33,7 +33,7 @@
     &__input
         margin-bottom: 15px
         width: 326px
-        height: 65px
+        height: 63px
         border-radius: 10px
         &:last-child
             margin-bottom: 0
@@ -101,11 +101,9 @@
         font-size: 15px
         line-height: 24px
 
-input.invalid
-    border: 1px solid red
-
-div.invalid
-    border: none
+.input
+    &_wrapper
+        margin-bottom: 14px
 
 
 // --------------### MEDIA max-width: 1400px ###-------------------//
@@ -221,3 +219,9 @@ div.invalid
             font-size: 14px
     .form_br
         max-width: 275px
+
+// --------------### MEDIA max-width: 340px ###-------------------//
+@media (max-width: 340px)
+    .brif
+        &__form
+            margin-left: 0

@@ -223,6 +223,15 @@ button {
   height: 22px;
 }
 
+input.invalid {
+  border: 1px solid red;
+}
+
+div.invalid {
+  border: none;
+  color: red;
+}
+
 @media (max-width: 1199px) {
   .container {
     max-width: 960px;
@@ -424,6 +433,17 @@ button {
   }
 }
 
+.input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
 .offer {
   padding-bottom: 72px;
   background: url("../img/offer_bg.png") no-repeat;
@@ -511,7 +531,6 @@ button {
 
 .offer__form_input {
   display: block;
-  margin-bottom: 30px;
   width: 194px;
   height: 63px;
   font-size: 15px;
@@ -539,6 +558,7 @@ button {
 
 @media (max-width: 1199px) {
   .offer__form {
+    width: 364px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -547,15 +567,30 @@ button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    max-width: 411px;
   }
   .offer__form_input {
-    width: 70%;
+    margin-top: 30px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
   }
-  .offer__form_input:first-child {
-    margin-left: 10px;
+  .offer__form_input:focus {
+    width: 100%;
   }
   .offer__form_btn {
-    width: 60%;
+    width: 100%;
+  }
+  .offer-box__contact {
+    max-width: 411px;
+  }
+  .input-box {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  .input__wrapper {
+    width: 100%;
   }
 }
 
@@ -580,11 +615,13 @@ button {
 @media (max-width: 769px) {
   .offer__form_btn {
     font-size: 13px;
-    width: 87%;
   }
   .offer-box__contact {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .offer-box_info {
+    width: 64%;
   }
 }
 
@@ -598,6 +635,12 @@ button {
     max-width: 249px;
     font-size: 16px;
   }
+  .offer__form {
+    width: 100%;
+  }
+  .offer__form_input {
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 540px) {
@@ -606,7 +649,7 @@ button {
     padding-bottom: 53px;
   }
   .offer-box_info {
-    width: 91%;
+    width: 95%;
   }
   .offer-box_title {
     font-size: 18px;
@@ -627,10 +670,10 @@ button {
     margin-left: 3px;
   }
   .offer__form {
-    width: 105%;
+    width: 275px;
   }
   .offer__form_input {
-    width: 100%;
+    margin-top: 0;
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 8px;
@@ -645,7 +688,6 @@ button {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.4;
-    width: 100%;
   }
   .call-info {
     margin: 9px 0 0 0;
@@ -653,6 +695,9 @@ button {
   .call-tel {
     margin-top: 7px;
     margin-left: 6px;
+  }
+  .input-box {
+    margin-bottom: 0;
   }
 }
 
@@ -945,6 +990,10 @@ button {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .price__cards_item {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -984,6 +1033,8 @@ button {
     height: 300px;
   }
   .price__cards_info {
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 10px;
     margin-bottom: -1px;
     font-family: "MuseoSansCyrl-700";
@@ -1317,7 +1368,7 @@ button {
 .brif__input {
   margin-bottom: 15px;
   width: 326px;
-  height: 65px;
+  height: 63px;
   border-radius: 10px;
 }
 
@@ -1417,12 +1468,8 @@ button {
   line-height: 24px;
 }
 
-input.invalid {
-  border: 1px solid red;
-}
-
-div.invalid {
-  border: none;
+.input_wrapper {
+  margin-bottom: 14px;
 }
 
 @media (max-width: 1400px) {
@@ -1577,6 +1624,12 @@ div.invalid {
   }
   .form_br {
     max-width: 275px;
+  }
+}
+
+@media (max-width: 340px) {
+  .brif__form {
+    margin-left: 0;
   }
 }
 
