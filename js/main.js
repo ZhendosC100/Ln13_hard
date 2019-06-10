@@ -13,16 +13,19 @@ $(document).ready(function(){
 
 let btn = $('.navbar__btn'),
     modal = $('.modal'),
+    shadowAside = $('.shadow_aside'),
     up = $('.up'),
     close = $('.modal__close');
 
     btn.on('click', function(e){
         e.preventDefault();
+        shadowAside.show();
         modal.show();
     });
 
     close.on('click', function(e){
         e.preventDefault();
+        shadowAside.hide();
         modal.hide();
     });
 

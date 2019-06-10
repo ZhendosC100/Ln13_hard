@@ -791,7 +791,7 @@ div.invalid {
   padding-bottom: 72px;
   background: url("../img/offer_bg.jpg") no-repeat;
   background-position: center right;
-  background-size: contain;
+  background-size: 100% 100%;
   position: relative;
 }
 
@@ -1069,13 +1069,20 @@ div.invalid {
   width: 300px;
   height: 200px;
   text-align: center;
-  background-color: grey;
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  -webkit-box-shadow: 0 20px 25px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 20px 25px rgba(0, 0, 0, 0.5);
 }
 
 .modal__close {
   position: inherit;
   top: 5px;
   right: 5px;
+  border-radius: 3px;
+  border: none;
+  background: #ffd200;
 }
 
 .modal__title {
@@ -1300,6 +1307,8 @@ div.invalid {
             justify-content: center;
   }
   .price__cards_item {
+    margin-left: 2px;
+    margin-right: 2px;
     width: 271px;
     height: 300px;
   }
@@ -1322,6 +1331,9 @@ div.invalid {
     height: 3px;
     background-color: #ffd200;
   }
+  .price__cards_info {
+    margin-bottom: 2px;
+  }
   .img {
     width: 271px;
   }
@@ -1332,10 +1344,6 @@ div.invalid {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  .price__cards_item {
-    margin-left: 2px;
-    margin-right: 2px;
   }
 }
 

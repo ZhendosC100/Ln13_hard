@@ -36,6 +36,14 @@ gulp.task('move-js', function(done){
     done();
 });
 
+gulp.task('move-php', function(done){
+    return gulp.src('*.php') // from folder
+    
+    .pipe(gulp.dest('dist')); //to folder
+
+    done();
+});
+
 gulp.task('minify', () => {
     return gulp.src('*.html')
       .pipe(htmlmin({ collapseWhitespace: true }))

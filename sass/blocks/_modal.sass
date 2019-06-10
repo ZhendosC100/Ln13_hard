@@ -19,10 +19,16 @@
     width: 300px
     height: 200px
     text-align: center
-    background-color: grey
+    border: 1px solid grey
+    border-radius: 10px
+    background-color: $bg-color
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.5) 
     &__close
         position: inherit
         top: 5px
         right: 5px
+        border-radius: 3px
+        border: none
+        background: $main-color
     &__title
         @include bold
