@@ -23,12 +23,12 @@
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" href="css/style.css">
-	<title>Lesson 24</title>
+	<title>Ремонт квартир</title>
 </head>
 
 <body>
 	<nav class="navbar">
-		<div class="container">
+		<div class="container navbar-container">
 			<div class="navbar-block">
 				<div class="navbar__logo">
 					<img src="img/nav_logo.png" alt="logo">
@@ -50,7 +50,7 @@
 	<!-- /.navbar -->
 	<main>
 		<section class="hero section">
-			<div class="container">
+			<div class="container hero-container">
 				<div class="wrapper">
 					<div class="hero-box_info">
 						<h1 class="hero-box_title title">
@@ -158,7 +158,7 @@
 		<!-- /.offer -->
 
 		<section class="section portfolio">
-			<div class="container">
+			<div class="container portfolio-container">
 				<div class="wrapper portfolio-wrapper">
 					<h3 class="title  portfolio-wrapper__title">
 						Работая с 2007 года, <br>
@@ -602,21 +602,21 @@
 			// Slider
 			$('.owl-carousel').owlCarousel({
 				loop: true,
-				margin: 10,
+				margin: 17,
 				nav: true,
 				responsive: {
 					0: {
-						items: 1
+						items: 1,
 					},
-					600: {
-						items: 2
+					720: {
+						items: 1
 					},
 					1000: {
 						items: 3
 					}
 				}
 			})
-			$(".owl-prev").html('<img class="arrows__img" src="img/left-arrow.png" alt="arrow__left"></<img>');
+			$(".owl-prev").html('<img class="arrows__img" src="img/left-arrow.png" alt="arrow__left">');
 			$(".owl-next").html('<img class="arrows__img" src="img/right-arrow.png" alt="arrow__right">');
 		});
 	</script>

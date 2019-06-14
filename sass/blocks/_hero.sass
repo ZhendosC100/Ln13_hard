@@ -44,6 +44,7 @@
     .box
         &-img_wrapper
             width: 50%
+            height: 60%
 
 // --------------### MEDIA max-width: 992px ###-------------------//
 
@@ -66,22 +67,27 @@
 @media (max-width: 420px)
     .hero
         padding-bottom: 26px
+        &-container
+            max-width: 278px
         &-box_title
             margin-top: -6px
-            margin-left: 14px
+            margin-left: 0
             margin-bottom: 19px
             @include bold
             font-size: 24px
             line-height: 26px
         &-box_subtitle 
             display: inline-block
-            margin: -6px 0 0 19px
+            margin: -6px 0 0 0
             font-size: 16px
             line-height: 18px
             max-width: 205px
         &-list
-            margin-left: 6%
+            margin-left: 0
             margin-top: 25px
+        &-list_img
+            width: 40px
+            height: 40px
         &-list_info
             margin-bottom: 12px
             &:last-child
@@ -95,5 +101,5 @@
             height: 100%
             width: 100%
         &-img
-            margin-left: 5px
+            margin-left: 0
             margin-top: 17px

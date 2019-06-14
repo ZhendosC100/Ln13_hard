@@ -55,10 +55,10 @@ let btn = $('.navbar__btn'),
                     data: form.serialize(), // serializes the form's elements.
                     success: function(data)
                     {
-                        alert("Dzęki! Dane zostały wysłane :)"); // show response from the php script.
+                        alert("Спасибо! Заявка принята."); // show response from the php script.
                     },
                     error: function (data) {
-                     alert("Niestety mamy błąd :(");
+                     alert("К сожалению выступила ошибка :(");
                  }
                   });
             } else {
@@ -92,10 +92,10 @@ let btn = $('.navbar__btn'),
                     data: form.serialize(), // serializes the form's elements.
                     success: function(data)
                     {
-                        alert("Dzęki! Dane zostały wysłane :)"); // show response from the php script.
+                        alert("Спасибо! Заявка принята."); // show response from the php script.
                     },
                     error: function (data) {
-                     alert("Niestety mamy błąd :(");
+                     alert("К сожалению выступила ошибка :(");
                  }
                   });
             } else {
